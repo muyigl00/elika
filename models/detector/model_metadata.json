@@ -1,0 +1,30 @@
+{
+  "file": "shahed_full_best.pt",
+  "sha256": "200004829b3715b5d767747f9f10bff56c6c345c3a78d9b5b64de6f8eb665d1a",
+  "architecture": "YOLO26n with P2/4 detection head",
+  "classes": {
+    "0": "bird",
+    "1": "not",
+    "2": "shahed"
+  },
+  "selected_class": "shahed",
+  "training_image_size": 960,
+  "training_seed": 0,
+  "validation_metrics_best_epoch": {
+    "epoch": 70,
+    "precision_all_classes": 0.89093,
+    "recall_all_classes": 0.90669,
+    "map50_all_classes": 0.91087,
+    "map50_95_all_classes": 0.75553
+  },
+  "dataset": {
+    "name": "shahed v5",
+    "publisher": "Roboflow Universe user e",
+    "url": "https://universe.roboflow.com/e-yjnj4/shahed-y4fsd/dataset/5",
+    "license": "CC BY 4.0",
+    "images": 18301,
+    "shahed_boxes_measured": 6245,
+    "small_object_warning": "Only 6 measured Shahed boxes have area <= 1024 px^2 at 1920x1080. Public training data alone does not validate long-range performance."
+  },
+  "source_note": "Bundled with the portable benchmark; see DATA_SOURCES.md"
+}

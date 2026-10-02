@@ -1,0 +1,54 @@
+benchmark:
+  start_distance_m: 10000.0
+  minimum_distance_m: 20.0
+  altitude_m: 100.0
+  speeds_kmh: [600, 800, 1000, 1200]
+  sample_rate_hz: 30.0
+  required_consecutive_detections: 3
+  confirmation_policy: all_sensors
+  maximum_frames_per_case: 10000
+
+cameras:
+  tele_rgb:
+    # Representative airborne zoom-camera video mode (DJI H30-class).
+    width: 3840
+    height: 2160
+    fps: 30.0
+    horizontal_fov_deg: 18.0
+    far_clip_m: 12000.0
+    mode: rgb
+    profile: airborne_4k_zoom
+  tele_thermal:
+    # Representative compact LWIR module (FLIR Boson+-class).
+    width: 640
+    height: 512
+    fps: 30.0
+    horizontal_fov_deg: 18.0
+    far_clip_m: 12000.0
+    mode: pseudo_thermal
+    transform: inverted_inferno
+    profile: boson_plus_640_12um
+    pixel_pitch_um: 12.0
+
+detector:
+  weights: models/detector/shahed_full_best.pt
+  class_name: shahed
+  confidence_threshold: 0.20
+  iou_threshold: 0.45
+  inference_size: 1920
+  center_gate_fraction: 0.25
+  device: "0"
+
+target:
+  model_sdf: models/shahed_136/model.sdf
+  # Front view for the downloaded Wikimedia STL. Fully configurable.
+  roll_deg: -90.0
+  pitch_deg: 0.0
+  yaw_deg: 90.0
+
+output:
+  save_all_raw_frames: false
+  save_video: true
+  video_fps: 30.0
+  radar_width: 1280
+  radar_height: 720

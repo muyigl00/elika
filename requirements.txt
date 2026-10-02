@@ -1,0 +1,7 @@
+# Nur zur Dokumentation. Die CPU-Pakete sind bereits unter runtime/python enthalten.
+ultralytics==8.4.150
+numpy==1.26.4
+opencv-python==4.11.0.86
+PyYAML==6.0.1
+torch==2.14.0+cpu
+torchvision==0.29.0+cpu
