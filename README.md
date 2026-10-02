@@ -32,7 +32,7 @@ Root-Rechte): <https://apptainer.org/docs/admin/main/installation.html>
 Den **gesamten Ordner** auf den anderen PC kopieren, dann im Terminal:
 
 ```bash
-cd shahed_detection_benchmark_portable
+cd elika
 bash scripts/verify.sh
 ```
 
