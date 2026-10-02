@@ -5,3 +5,5 @@ log/*.out
 log/*.err
 recordings/run_*/
 runtime/python-gpu/
+
+runtime/
